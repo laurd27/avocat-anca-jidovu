@@ -1374,45 +1374,6 @@ h6 {
     font-family: var(--font-body);
 }
 
-.demo-watermark-small {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-size: 0.6rem;
-    color: rgba(201, 169, 110, 0.2);
-    z-index: 9999;
-    pointer-events: none;
-    letter-spacing: 0.2em;
-    user-select: none;
-}
-
-#protection-overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 10001;
-    pointer-events: none;
-    transition: backdrop-filter 0.5s ease;
-}
-
-body.inspector-open #protection-overlay {
-    pointer-events: all;
-    background: rgba(10, 10, 15, 0.8);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-}
-
-body.inspector-open::after {
-    content: 'ACCES RESTRICȚIONAT ÎN MODUL DEMO';
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--color-accent);
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    z-index: 10002;
-    letter-spacing: 0.1em;
-}
 
 @media (max-width: 480px) {
     .hero-text h1 {

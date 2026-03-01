@@ -172,33 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Disable right click
     document.addEventListener('contextmenu', e => e.preventDefault());
 
-    // Disable common shortcuts
-    document.addEventListener('keydown', e => {
-        // F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
-        if (
-            e.keyCode === 123 ||
-            (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) ||
-            (e.ctrlKey && e.keyCode === 85)
-        ) {
-            e.preventDefault();
-            alert('Acțiunea este restricționată în varianta DEMO.');
-            return false;
-        }
-    });
-
-    // Detect DevTools (simple version)
-    setInterval(() => {
-        const threshold = 160;
-        const widthThreshold = window.outerWidth - window.innerWidth > threshold;
-        const heightThreshold = window.outerHeight - window.innerHeight > threshold;
-
-        if (widthThreshold || heightThreshold) {
-            document.body.classList.add('inspector-open');
-        } else {
-            document.body.classList.remove('inspector-open');
-        }
-    }, 1000);
-
     // ---- Footer Year ----
     const yearEl = document.getElementById('currentYear');
     if (yearEl) {
